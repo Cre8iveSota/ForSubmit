@@ -93,7 +93,7 @@ export const DivCenter = styled.div`
 `;
 
 export const MainTitleCss = styled.h1`
-  font-size: 10em;
+  font-size: 6em;
   text-align: center;
   color: palevioletred;
   margin-top: 0;

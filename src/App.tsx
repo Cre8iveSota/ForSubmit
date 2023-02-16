@@ -102,13 +102,16 @@ export default function App() {
           <Grid container spacing={2}>
             <Grid item xs={2}></Grid>
             <Grid item xs={8}>
-              <Grid container spacing={2}>
+              <Grid
+                container
+                spacing={2}
+                style={{ transform: "translate(0%, -15%)" }}
+              >
                 <Grid item xs={3}>
                   <OptionCard
                     cardTitle={"About Me"}
                     cardText={`
-                    Let me introduce myself, I am 27 years old and currently unemployed.
-                     By the way, I like takoyaki.
+                    Let me introduce myself, I am 27 years old. By the way, I like takoyaki.
                        `}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(0)}
@@ -120,7 +123,6 @@ export default function App() {
                     cardTitle={"Workes"}
                     cardText={`
                     I present illustrator/photoshop works and fun game works created as a hobby.
-                    The page you see now is my latest work.
                     `}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(1)}
@@ -131,8 +133,7 @@ export default function App() {
                   <OptionCard
                     cardTitle={"Hobbies"}
                     cardText={`
-                    I have many hobbies and am happy to do many things I want to do.
-                    I want to have unlimited time.
+                    I have many hobbies, but I will introduce only two.
                       `}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(2)}

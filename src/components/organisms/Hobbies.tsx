@@ -18,7 +18,7 @@ const H1Impact = styled.h1`
 `;
 
 const H2DetailCustom = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: palevioletred;
   font-weight: bolder;
   margin-bottom: 0px;
@@ -31,6 +31,15 @@ const H3 = styled.h3`
   padding-top: 0px;
   margin-top: 0;
   margin-bottom: 0px;
+`;
+
+const H3SpecialOrder = styled.h3`
+  font-size: 1rem;
+  color: palevioletred;
+  font-weight: bolder;
+  padding-top: 0px;
+  margin-top: 0;
+  margin-bottom: 10px;
 `;
 
 export default function Hobbies() {
@@ -86,14 +95,6 @@ export default function Hobbies() {
           ></video>
         </Grid>
         <Grid item xs={1} />
-        <Grid item xs={1} />
-        <Grid item xs={11}>
-          <H2DetailCustom>Others: </H2DetailCustom>
-          <H3>
-            My hobbies include: karaoke, billiards, bowling, reading,
-            skateboard, violin, board game, etc...
-          </H3>
-        </Grid>
       </Grid>
     </>
   );

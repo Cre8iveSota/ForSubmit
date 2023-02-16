@@ -90,10 +90,6 @@ export default function BasicTabs() {
               </H3Detail>
             </Grid>
             <StandardImageList />
-            <Grid item xs={10} />
-            <Grid item xs={2}>
-              <H3Detail>etc..</H3Detail>
-            </Grid>
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
@@ -107,10 +103,6 @@ export default function BasicTabs() {
               </H3Detail>
             </Grid>
             <StandardImageListMov />
-            <Grid item xs={10} />
-            <Grid item xs={2}>
-              <H3Detail>etc..</H3Detail>
-            </Grid>
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={2}>
@@ -127,13 +119,6 @@ export default function BasicTabs() {
             In terms of functionality, the biggest problem is that the site is
             currently not responsive, so it can only be displayed accurately on
             a limited number of devices.
-            <br />
-            Also, the circular button labeled "Push" needs to be adjusted as it
-            only has a scrolling function.
-            <br />
-            <br />
-            I recognize that the works in the Works tab are just lined up, which
-            is an area for improvement in the future.
             <br />
             <br />
             <br />
