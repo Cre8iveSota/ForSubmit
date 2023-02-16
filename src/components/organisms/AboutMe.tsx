@@ -16,7 +16,7 @@ const H1 = styled.h1`
 `;
 
 const H1Impact = styled.h1`
-  font-size: 3rem;
+  font-size: 2rem;
   color: palevioletred;
   font-weight: bolder;
   display: inline-block;
@@ -28,6 +28,7 @@ const H2Detail = styled.h2`
   color: palevioletred;
   font-weight: bolder;
   margin-top: 0px;
+  padding-top: 0px;
   display: inline-block;
 `;
 

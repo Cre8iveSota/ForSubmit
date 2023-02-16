@@ -8,7 +8,7 @@ interface IProps {
 function Title(props: IProps) {
   let displayName = "";
   if (props.countNum == 0) displayName = "About Me";
-  if (props.countNum === 1) displayName = "TodoContainer";
+  if (props.countNum === 1) displayName = "Workes";
   if (props.countNum === 2) displayName = "Hobbies";
   return <TitleCss>{displayName}</TitleCss>;
 }

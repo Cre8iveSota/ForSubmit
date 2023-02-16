@@ -84,24 +84,16 @@ export default function BasicTabs() {
             <Grid item xs={4}>
               <H2Detail>illustrator/photoshop:</H2Detail>
             </Grid>
-            <Grid item xs={8}>
-              <H3Detail style={{ transform: "translate(-10%, 30%)" }}>
-                The following pieces were created using the book as a reference.
-              </H3Detail>
-            </Grid>
+            <Grid item xs={8}></Grid>
             <StandardImageList />
           </Grid>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <H2Detail>Games</H2Detail>
+              <H2Detail>Games:</H2Detail>
             </Grid>
-            <Grid item xs={8}>
-              <H3Detail style={{ transform: "translate(-10%, 30%)" }}>
-                The following pieces were created using the book as a reference.
-              </H3Detail>
-            </Grid>
+            <Grid item xs={8}></Grid>
             <StandardImageListMov />
           </Grid>
         </TabPanel>

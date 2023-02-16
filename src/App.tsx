@@ -122,7 +122,7 @@ export default function App() {
                   <OptionCard
                     cardTitle={"Workes"}
                     cardText={`
-                    I present illustrator/photoshop works and fun game works created as a hobby.
+                    I present illustrator/photoshop works , as well as a few game pieces.
                     `}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(1)}
