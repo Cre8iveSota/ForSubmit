@@ -4,7 +4,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 
 export default function StandardImageListMov() {
   return (
-    <ImageList sx={{ width: 1200, height: 240 }} cols={7} rowHeight={164}>
+    <ImageList sx={{ width: 1200, height: 200 }} cols={7} rowHeight={164}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <video

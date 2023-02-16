@@ -14,6 +14,7 @@ const H2Detail = styled.h2`
   font-weight: bolder;
   margin-top: 0px;
   display: inline-block;
+  transform: translate(0%, -10%);
 `;
 
 const H3Detail = styled.h3`
@@ -84,7 +85,6 @@ export default function BasicTabs() {
             <Grid item xs={4}>
               <H2Detail>illustrator/photoshop:</H2Detail>
             </Grid>
-            <Grid item xs={8}></Grid>
             <StandardImageList />
           </Grid>
         </TabPanel>
@@ -93,7 +93,6 @@ export default function BasicTabs() {
             <Grid item xs={4}>
               <H2Detail>Games:</H2Detail>
             </Grid>
-            <Grid item xs={8}></Grid>
             <StandardImageListMov />
           </Grid>
         </TabPanel>

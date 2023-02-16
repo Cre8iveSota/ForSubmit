@@ -7,8 +7,8 @@ interface IProps {
   title?: string;
 }
 
-const H1 = styled.h1`
-  font-size: 5 rem;
+const H1 = styled.h2`
+  font-size: 3 rem;
   font-weight: bolder;
   color: palevioletred;
   display: inline-block;

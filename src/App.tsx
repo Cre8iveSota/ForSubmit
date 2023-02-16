@@ -105,7 +105,7 @@ export default function App() {
               <Grid
                 container
                 spacing={2}
-                style={{ transform: "translate(0%, -15%)" }}
+                style={{ transform: "translate(0%, -35)" }}
               >
                 <Grid item xs={3}>
                   <OptionCard
