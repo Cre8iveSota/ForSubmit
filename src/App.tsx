@@ -9,11 +9,12 @@ import {
 import React, { useState, useEffect, useRef } from "react";
 import CircleButton from "./components/atoms/CircleButton";
 import Hobbies from "./components/organisms/Hobbies";
-import AboutMe from "./components/pages/AboutMe";
+import AboutMe from "./components/organisms/AboutMe";
 import { TodoContainer } from "./components/pages/TodoPresenter/feature";
 import Title from "./components/atoms/Title";
 import OptionCard from "./components/molecules/OptionCard";
 import { Grid } from "@mui/material";
+import Workes from "./components/organisms/Workes";
 
 interface IProps {
   id: string;
@@ -43,11 +44,13 @@ export default function App() {
   }, []);
 
   const getBackgroundImage = () => {
-    if (window.innerWidth <= 768) {
-      return "./../../../asset/MainBoard_small.jpg";
-    } else {
-      return "./../../../asset/MainBoard.jpg";
-    }
+    // if (window.innerWidth <= 100) {
+    //   return "./../../../asset/MainBoard_small.jpg";
+    // } else {
+    //   return "./../../../asset/MainBoard.jpg";
+    // }
+
+    return "./../../../asset/MainBoard.jpg";
 
     // return scrollPosition > 20
     //   ? "./../../../asset/MainBoard.jpg"
@@ -59,7 +62,7 @@ export default function App() {
       backgroundImage: `url(${getBackgroundImage()})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      backgroundSize: "100% auto",
+      backgroundSize: "cover",
     };
   };
 
@@ -70,7 +73,7 @@ export default function App() {
   };
 
   const scrollToContainer = () => {
-    containerRef.current?.scrollIntoView({ behavior: "smooth" });
+    containerRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
   return (
@@ -89,7 +92,7 @@ export default function App() {
             <RowMain>
               <Title countNum={contentIndex} />
               {contentIndex === 0 && <AboutMe />}
-              {contentIndex === 1 && <TodoContainer />}
+              {contentIndex === 1 && <Workes />}
               {contentIndex === 2 && <Hobbies />}
             </RowMain>
           </Grid>
@@ -107,16 +110,19 @@ export default function App() {
                     Let me introduce myself, I am 27 years old and currently unemployed.
                      By the way, I like takoyaki.
                        `}
-                    buttonText={"Please Push"}
+                    buttonText={"Go to details"}
                     onClick={() => changeContentIndex(0)}
                     imgSrc={"./../../../asset/AboutMe.jpg"}
                   />
                 </Grid>
                 <Grid item xs={3}>
                   <OptionCard
-                    cardTitle={"DemoRouter1"}
-                    cardText={"I am Gridd"}
-                    buttonText={"Please Push"}
+                    cardTitle={"Workes"}
+                    cardText={`
+                    I present illustrator/photoshop works and fun game works created as a hobby.
+                    The page you see now is my latest work.
+                    `}
+                    buttonText={"Go to details"}
                     onClick={() => changeContentIndex(1)}
                     imgSrc={"./../../../asset/Workes.jpg"}
                   />
@@ -128,14 +134,17 @@ export default function App() {
                     I have many hobbies and am happy to do many things I want to do.
                     I want to have unlimited time.
                       `}
-                    buttonText={"Please Push"}
+                    buttonText={"Go to details"}
                     onClick={() => changeContentIndex(2)}
                     imgSrc={"./../../../asset/Hobbies.jpg"}
                   />
                 </Grid>
                 <Grid item xs={3}>
                   <PaddingDivSmall />
-                  <img src="./../../../asset/SotaHiguchi.svg" />
+                  <img
+                    src="./../../../asset/SotaHiguchi.svg"
+                    style={{ transform: "translate(10%, 5%)" }}
+                  />
                 </Grid>
               </Grid>
             </Grid>

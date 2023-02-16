@@ -43,15 +43,14 @@ export default function Hobbies() {
         <Grid item xs={6}>
           <H1>Electric Works :</H1>
         </Grid>
-
-        <Grid item xs={6}>
+        <Grid item xs={6} style={{ paddingTop: "0px" }}>
           <H3>
             I participated in Japanese competitions but failed to qualify in all
             of them. However, I was sometimes invited by the organizers of the
             competitions.
           </H3>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} style={{ paddingTop: "0px" }}>
           <H3>
             I built an electronic piano using an Arudino and parts I had at
             home. Aluminum foil is stretched over the back of the keys to

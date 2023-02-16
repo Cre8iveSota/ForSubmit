@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import AboutMe from "../components/pages/AboutMe";
+import AboutMe from "../components/organisms/AboutMe";
 import { Container, Row } from "react-bootstrap";
 
 // Title コンポーネントの定義
@@ -35,10 +35,10 @@ export const RowMain = styled(Row)`
   z-index: ;
 `;
 export const RowFooter = styled(Row)`
-  background-color: lightgray;
-  border: medium dashed green;
+  // background-color: lightgray;
+  border-bottom: medium green;
   height: 330px;
-  opacity: 0.5;
+  // opacity: 0.5;
   padding: 0;
 `;
 

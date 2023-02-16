@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { MaxFrameCss } from "../../css/default";
 
@@ -25,7 +24,7 @@ const H1Impact = styled.h1`
 `;
 
 const H2Detail = styled.h2`
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: palevioletred;
   font-weight: bolder;
   margin-top: 0px;

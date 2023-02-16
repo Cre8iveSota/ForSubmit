@@ -23,7 +23,7 @@ function OptionCard(props: IProps) {
   return (
     <>
       <Card
-        sx={{ maxWidth: 345 }}
+        sx={{ maxWidth: 340, maxHeight: 300 }}
         style={{ border: "0.07rem solid #000000", borderRadius: "5%" }}
       >
         <CardActionArea>
@@ -34,7 +34,12 @@ function OptionCard(props: IProps) {
             alt="test"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              style={{ textAlign: "center" }}
+            >
               {props.cardTitle}
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -47,7 +52,11 @@ function OptionCard(props: IProps) {
             size="small"
             color="primary"
             onClick={() => props.onClick()}
-            style={{ display: "block", margin: "0 auto" }}
+            style={{
+              display: "block",
+              margin: "0 auto",
+              transform: "translate(0%, -60%)",
+            }}
           >
             {props.buttonText}
           </Button>

@@ -4,8 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AboutMe from "./components/pages/AboutMe";
-import DemoRouter2 from "./components/pages/DemoRouter2";
+import AboutMe from "./components/organisms/AboutMe";
 import { TodoContainer } from "./components/pages/TodoPresenter/feature";
 import { store } from "./store/store";
 
@@ -18,18 +17,18 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  {
-    path: "/demo1",
-    element: <AboutMe />,
-  },
-  {
-    path: "/demo2",
-    element: <DemoRouter2 />,
-  },
-  {
-    path: "todo",
-    element: <TodoContainer />,
-  },
+  // {
+  //   path: "/demo1",
+  //   element: <AboutMe />,
+  // },
+  // {
+  //   path: "/demo2",
+  //   element: <DemoRouter2 />,
+  // },
+  // {
+  //   path: "todo",
+  //   element: <TodoContainer />,
+  // },
 ]);
 
 root.render(
