@@ -1,15 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AboutMe from "./components/pages/AboutMe";
+import DemoRouter2 from "./components/pages/DemoRouter2";
+import { TodoContainer } from "./components/pages/TodoPresenter/feature";
+import { store } from "./store/store";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/demo1",
+    element: <AboutMe />,
+  },
+  {
+    path: "/demo2",
+    element: <DemoRouter2 />,
+  },
+  {
+    path: "todo",
+    element: <TodoContainer />,
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
