@@ -29,7 +29,7 @@ export const MaxFrameCss = styled.video`
 // background: url(../img/kv-alternative.jpg) no-repeat center/cover;
 
 export const RowMain = styled(Row)`
-  height: 600px;
+  height: 500px;
   opacity: 1;
   background-position: center;
   z-index: ;
@@ -37,7 +37,7 @@ export const RowMain = styled(Row)`
 export const RowFooter = styled(Row)`
   // background-color: lightgray;
   border-bottom: medium green;
-  height: 330px;
+  height: 430px;
   // opacity: 0.5;
   padding: 0;
 `;

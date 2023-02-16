@@ -13,6 +13,7 @@ const H2Detail = styled.h2`
   color: palevioletred;
   font-weight: bolder;
   margin-top: 0px;
+  margin-bottom: 0px;
   display: inline-block;
   transform: translate(0%, -10%);
 `;
@@ -81,20 +82,12 @@ export default function BasicTabs() {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <H2Detail>illustrator/photoshop:</H2Detail>
-            </Grid>
-            <StandardImageList />
-          </Grid>
+          <H2Detail>illustrator/photoshop:</H2Detail>
+          <StandardImageList />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <H2Detail>Games:</H2Detail>
-            </Grid>
-            <StandardImageListMov />
-          </Grid>
+          <H2Detail>Games:</H2Detail>
+          <StandardImageListMov />
         </TabPanel>
         <TabPanel value={value} index={2}>
           <H3Detail>
