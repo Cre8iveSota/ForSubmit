@@ -37,7 +37,7 @@ export const MaxFrameCss = styled.video`
 // background: url(../img/kv-alternative.jpg) no-repeat center/cover;
 
 export const RowMain = styled(Row)`
-  height: 470px;
+  height: 520px;
   opacity: 1;
   background-position: center;
   z-index: ;

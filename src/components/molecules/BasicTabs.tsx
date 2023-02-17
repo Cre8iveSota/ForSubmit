@@ -131,11 +131,6 @@ export default function BasicTabs() {
               will need to be adjusted significantly.
               <br />
               <br />
-              In terms of functionality, the biggest problem is that the site is
-              currently not responsive, so it can only be displayed accurately
-              on a limited number of devices.
-              <br />
-              <br />
               And thank you for checking my page.
               <br />
             </H3DetailSM>
@@ -195,11 +190,6 @@ export default function BasicTabs() {
               <br />
               Also, this page was created in a hurry to enroll in Torrens and
               will need to be adjusted significantly.
-              <br />
-              <br />
-              In terms of functionality, the biggest problem is that the site is
-              currently not responsive, so it can only be displayed accurately
-              on a limited number of devices.
               <br />
               <br />
               And thank you for checking my page.
