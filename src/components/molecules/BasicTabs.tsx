@@ -7,6 +7,7 @@ import styled from "styled-components";
 import QuiltedImageList from "./QuiltedImageList";
 import { Grid } from "@mui/material";
 import StandardImageListMov from "./StandardImageListMov";
+import MediaQuery from "react-responsive";
 
 const H2Detail = styled.h2`
   font-size: 1.8rem;
@@ -20,6 +21,14 @@ const H2Detail = styled.h2`
 
 const H3Detail = styled.h3`
   font-size: 1.3rem;
+  color: palevioletred;
+  font-weight: bolder;
+  margin-top: 0px;
+  display: inline-block;
+`;
+
+const H3DetailSM = styled.div`
+  font-size: 0.5rem;
   color: palevioletred;
   font-weight: bolder;
   margin-top: 0px;
@@ -68,70 +77,137 @@ export default function BasicTabs() {
 
   return (
     <>
-      <Box sx={{ width: "100%" }}>
-        Please select the tab that interests you.↓
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab
-              label="illustrator / photoshop"
-              {...a11yProps(0)}
-              style={{
-                fontWeight: "bolder",
-                fontSize: "1.3rem",
-                color: "#0084EA",
-              }}
-            />
-            <Tab
-              label="Games"
-              {...a11yProps(1)}
-              style={{
-                fontWeight: "bolder",
-                fontSize: "1.3rem",
-                color: "#0084EA",
-              }}
-            />
-            <Tab
-              label="Web"
-              {...a11yProps(2)}
-              style={{
-                fontWeight: "bolder",
-                fontSize: "1.3rem",
-                color: "#0084EA",
-              }}
-            />
-          </Tabs>
+      <MediaQuery query="(max-width: 850px)">
+        <Box sx={{ width: "100%", color: "white" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab
+                label={`Design`}
+                {...a11yProps(0)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "0.3rem",
+                  color: "#0084EA",
+                }}
+              />
+              <Tab
+                label="Games"
+                {...a11yProps(1)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "0.3rem",
+                  color: "#0084EA",
+                }}
+              />
+              <Tab
+                label="Web"
+                {...a11yProps(2)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "0.3rem",
+                  color: "#0084EA",
+                }}
+              />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            <QuiltedImageList />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <StandardImageListMov />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <H3DetailSM>
+              This is the only page available.
+              <br />
+              This page was created primarily with React, Typescript, Redux,
+              Move faster with intuitive React UI tools.
+              <br />
+              Also, this page was created in a hurry to enroll in Torrens and
+              will need to be adjusted significantly.
+              <br />
+              <br />
+              In terms of functionality, the biggest problem is that the site is
+              currently not responsive, so it can only be displayed accurately
+              on a limited number of devices.
+              <br />
+              <br />
+              And thank you for checking my page.
+              <br />
+            </H3DetailSM>
+          </TabPanel>
         </Box>
-        <TabPanel value={value} index={0}>
-          <QuiltedImageList />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <StandardImageListMov />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <H3Detail>
-            This is the only page available.
-            <br />
-            This page was created primarily with React, Typescript, Redux, Move
-            faster with intuitive React UI tools.
-            <br />
-            Also, this page was created in a hurry to enroll in Torrens and will
-            need to be adjusted significantly.
-            <br />
-            <br />
-            In terms of functionality, the biggest problem is that the site is
-            currently not responsive, so it can only be displayed accurately on
-            a limited number of devices.
-            <br />
-            <br />
-            And thank you for checking my page.
-            <br />
-          </H3Detail>
-        </TabPanel>
-      </Box>
+      </MediaQuery>
+      <MediaQuery query="(min-width: 850px)">
+        <Box sx={{ width: "100%" }}>
+          Please select the tab that interests you.↓
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab
+                label="illustrator / photoshop"
+                {...a11yProps(0)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "1.3rem",
+                  color: "#0084EA",
+                }}
+              />
+              <Tab
+                label="Games"
+                {...a11yProps(1)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "1.3rem",
+                  color: "#0084EA",
+                }}
+              />
+              <Tab
+                label="Web"
+                {...a11yProps(2)}
+                style={{
+                  fontWeight: "bolder",
+                  fontSize: "1.3rem",
+                  color: "#0084EA",
+                }}
+              />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            <QuiltedImageList />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <StandardImageListMov />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <H3Detail>
+              This is the only page available.
+              <br />
+              This page was created primarily with React, Typescript, Redux,
+              Move faster with intuitive React UI tools.
+              <br />
+              Also, this page was created in a hurry to enroll in Torrens and
+              will need to be adjusted significantly.
+              <br />
+              <br />
+              In terms of functionality, the biggest problem is that the site is
+              currently not responsive, so it can only be displayed accurately
+              on a limited number of devices.
+              <br />
+              <br />
+              And thank you for checking my page.
+              <br />
+            </H3Detail>
+          </TabPanel>
+        </Box>
+      </MediaQuery>
     </>
   );
 }

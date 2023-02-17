@@ -11,6 +11,14 @@ export const TitleCss = styled.h1`
   margin-bottom: 0%;
 `;
 
+export const TitleCssSM = styled.h1`
+  font-size: 1.5rem;
+  text-align: left;
+  color: palevioletred;
+  font-weight: bolder;
+  margin-bottom: 0%;
+`;
+
 export const MaxFrameCss = styled.video`
   // width: 100%;
   height: 50vh;
@@ -34,10 +42,26 @@ export const RowMain = styled(Row)`
   background-position: center;
   z-index: ;
 `;
+
+export const RowMainSM = styled(Row)`
+  height: 330px;
+  opacity: 1;
+  background-position: center;
+  z-index: ;
+`;
+
 export const RowFooter = styled(Row)`
   // background-color: lightgray;
   border-bottom: medium green;
   height: 450px;
+  // opacity: 0.5;
+  padding: 0;
+`;
+
+export const RowFooterSM = styled(Row)`
+  // background-color: lightgray;
+  border-bottom: medium green;
+  height: 330px;
   // opacity: 0.5;
   padding: 0;
 `;
@@ -69,6 +93,14 @@ export const Background1 = styled.div`
   margin: 0;
 `;
 
+export const Background1SM = styled.div`
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-image: url(./../asset/FrontView.jpg);
+  margin: 0;
+`;
+
 export const Background = styled.div`
   height: 100vh;
   background-image: url("your-background-image-url-here");
@@ -94,6 +126,16 @@ export const DivCenter = styled.div`
 
 export const MainTitleCss = styled.h1`
   font-size: 6em;
+  text-align: center;
+  color: palevioletred;
+  margin-top: 0;
+  font-family: "Source Serif Pro", serif;
+  font-weight: bolder;
+  padding-top: 5%;
+`;
+
+export const MainTitleCssSM = styled.h1`
+  font-size: 2rem;
   text-align: center;
   color: palevioletred;
   margin-top: 0;

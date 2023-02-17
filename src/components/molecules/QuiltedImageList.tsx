@@ -1,6 +1,7 @@
 import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import MediaQuery from "react-responsive";
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
@@ -13,26 +14,52 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
 export default function QuiltedImageList() {
   return (
-    <ImageList
-      sx={{ width: 900, height: 220 }}
-      variant="quilted"
-      cols={5}
-      rowHeight={250}
-    >
-      {itemData.map((item) => (
-        <ImageListItem
-          key={item.img}
-          cols={item.cols || 1}
-          rows={item.rows || 1}
+    <>
+      <MediaQuery query="(max-width: 850px)">
+        <ImageList
+          sx={{ width: 260, height: 170 }}
+          variant="quilted"
+          cols={5}
+          rowHeight={70}
         >
-          <img
-            {...srcset(item.img, 10, item.rows, item.cols)}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+          {itemData.map((item) => (
+            <ImageListItem
+              key={item.img}
+              cols={item.cols || 1}
+              rows={item.rows || 1}
+            >
+              <img
+                {...srcset(item.img, 10, item.rows, item.cols)}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </MediaQuery>
+      <MediaQuery query="(min-width: 850px)">
+        <ImageList
+          sx={{ width: 900, height: 220 }}
+          variant="quilted"
+          cols={5}
+          rowHeight={250}
+        >
+          {itemData.map((item) => (
+            <ImageListItem
+              key={item.img}
+              cols={item.cols || 1}
+              rows={item.rows || 1}
+            >
+              <img
+                {...srcset(item.img, 10, item.rows, item.cols)}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </MediaQuery>
+    </>
   );
 }
 
