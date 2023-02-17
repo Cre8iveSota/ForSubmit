@@ -4,7 +4,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import styled from "styled-components";
-import StandardImageList from "./StandardImageList";
+import QuiltedImageList from "./QuiltedImageList";
 import { Grid } from "@mui/material";
 import StandardImageListMov from "./StandardImageListMov";
 
@@ -76,17 +76,39 @@ export default function BasicTabs() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="illustrator / photoshop" {...a11yProps(0)} />
-            <Tab label="Games" {...a11yProps(1)} />
-            <Tab label="Web" {...a11yProps(2)} />
+            <Tab
+              label="illustrator / photoshop"
+              {...a11yProps(0)}
+              style={{
+                fontWeight: "bolder",
+                fontSize: "1.3rem",
+                color: "#0084EA",
+              }}
+            />
+            <Tab
+              label="Games"
+              {...a11yProps(1)}
+              style={{
+                fontWeight: "bolder",
+                fontSize: "1.3rem",
+                color: "#0084EA",
+              }}
+            />
+            <Tab
+              label="Web"
+              {...a11yProps(2)}
+              style={{
+                fontWeight: "bolder",
+                fontSize: "1.3rem",
+                color: "#0084EA",
+              }}
+            />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <H2Detail>illustrator/photoshop:</H2Detail>
-          <StandardImageList />
+          <QuiltedImageList />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <H2Detail>Games:</H2Detail>
           <StandardImageListMov />
         </TabPanel>
         <TabPanel value={value} index={2}>
@@ -103,7 +125,6 @@ export default function BasicTabs() {
             In terms of functionality, the biggest problem is that the site is
             currently not responsive, so it can only be displayed accurately on
             a limited number of devices.
-            <br />
             <br />
             <br />
             And thank you for checking my page.

@@ -5,6 +5,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Grid,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -26,41 +27,56 @@ function OptionCard(props: IProps) {
         sx={{ maxWidth: 340, maxHeight: 300 }}
         style={{ border: "0.07rem solid #000000", borderRadius: "5%" }}
       >
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image={props.imgSrc}
-            alt="test"
-          />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              style={{ textAlign: "center" }}
-            >
-              {props.cardTitle}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {props.cardText}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button
-            size="small"
-            color="primary"
-            onClick={() => props.onClick()}
-            style={{
-              display: "block",
-              margin: "0 auto",
-              transform: "translate(0%, -60%)",
-            }}
-          >
-            {props.buttonText}
-          </Button>
-        </CardActions>
+        <Grid
+          container
+          spacing={2}
+          style={{
+            justifyContent: "center",
+            textAlign: "center",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={props.imgSrc}
+              alt="test"
+            />
+            <CardContent>
+              <Grid item xs={12}>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  style={{ textAlign: "center" }}
+                >
+                  {props.cardTitle}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {props.cardText}
+                </Typography>
+              </Grid>
+            </CardContent>
+          </CardActionArea>
+
+          <CardActions>
+            <Grid item xs={12}>
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => props.onClick()}
+                style={{
+                  display: "block",
+                  margin: "0 auto",
+                  transform: "translate(0%, -60%)",
+                }}
+              >
+                {props.buttonText}
+              </Button>
+            </Grid>
+          </CardActions>
+        </Grid>
       </Card>
     </>
   );

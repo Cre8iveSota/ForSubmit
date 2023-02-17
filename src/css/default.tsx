@@ -29,7 +29,7 @@ export const MaxFrameCss = styled.video`
 // background: url(../img/kv-alternative.jpg) no-repeat center/cover;
 
 export const RowMain = styled(Row)`
-  height: 500px;
+  height: 470px;
   opacity: 1;
   background-position: center;
   z-index: ;
@@ -37,7 +37,7 @@ export const RowMain = styled(Row)`
 export const RowFooter = styled(Row)`
   // background-color: lightgray;
   border-bottom: medium green;
-  height: 430px;
+  height: 450px;
   // opacity: 0.5;
   padding: 0;
 `;
@@ -56,14 +56,14 @@ export const BackGroundImgStyledDiv = styled.div`
 
 export const Background2 = styled.div`
   height: 100vh;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-image: url(./../asset/MainBoard.jpg);
 `;
 
 export const Background1 = styled.div`
   height: 100vh;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-image: url(./../asset/FrontView.jpg);
   margin: 0;
@@ -72,13 +72,13 @@ export const Background1 = styled.div`
 export const Background = styled.div`
   height: 100vh;
   background-image: url("your-background-image-url-here");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 `;
 
 export const BackgroundColor = styled.div`
   background-color: black;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   z-index: 1;
 `;

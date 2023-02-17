@@ -110,9 +110,9 @@ export default function App() {
                 <Grid item xs={3}>
                   <OptionCard
                     cardTitle={"About Me"}
-                    cardText={`
-                    Let me introduce myself, I am 27 years old. By the way, I like takoyaki.
-                       `}
+                    cardText={` Let me introduce myself,
+  I am 27 years old. By the
+  way, I like takoyaki.`}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(0)}
                     imgSrc={"./../../../asset/AboutMe.jpg"}
@@ -121,9 +121,9 @@ export default function App() {
                 <Grid item xs={3}>
                   <OptionCard
                     cardTitle={"Workes"}
-                    cardText={`
-                    I present illustrator/photoshop works , as well as a few game pieces.
-                    `}
+                    cardText={`  I illustrator and photoshop
+  works and simple games
+  made as a hobby.`}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(1)}
                     imgSrc={"./../../../asset/Workes.jpg"}
@@ -132,9 +132,9 @@ export default function App() {
                 <Grid item xs={3}>
                   <OptionCard
                     cardTitle={"Hobbies"}
-                    cardText={`
-                    I have many hobbies, but I will introduce only two.
-                      `}
+                    cardText={` I have many hobbies,
+  but I will introduce
+  only two.`}
                     buttonText={"Go to details"}
                     onClick={() => changeContentIndex(2)}
                     imgSrc={"./../../../asset/Hobbies.jpg"}
