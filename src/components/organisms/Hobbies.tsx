@@ -3,7 +3,11 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import { PaddingDiv, PaddingDivSmall } from "../../css/default";
+import {
+  AnimationContainer,
+  PaddingDiv,
+  PaddingDivSmall,
+} from "../../css/default";
 
 const H1 = styled.h1`
   font-weight: bolder;
@@ -60,7 +64,7 @@ const H3DetailSM = styled.div`
 
 export default function Hobbies() {
   return (
-    <>
+    <AnimationContainer>
       <MediaQuery query="(max-width: 850px)">
         <Grid
           container
@@ -161,6 +165,6 @@ export default function Hobbies() {
           <Grid item xs={1} />
         </Grid>
       </MediaQuery>
-    </>
+    </AnimationContainer>
   );
 }

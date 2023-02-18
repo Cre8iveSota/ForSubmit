@@ -27,7 +27,7 @@ function OptionCard(props: IProps) {
     <>
       <MediaQuery query="(max-width: 850px)">
         <Card
-          sx={{ maxWidth: 100, maxHeight: 180 }}
+          sx={{ maxWidth: 100, maxHeight: 190 }}
           style={{ border: "0.07rem solid #000000", borderRadius: "5%" }}
         >
           <Grid
@@ -66,7 +66,11 @@ function OptionCard(props: IProps) {
                   </Typography>
                   <Typography
                     color="text.secondary"
-                    style={{ textAlign: "center", fontSize: "10px" }}
+                    style={{
+                      textAlign: "center",
+                      fontSize: "10px",
+                      whiteSpace: "pre-wrap",
+                    }}
                   >
                     <div
                       style={{
@@ -90,8 +94,9 @@ function OptionCard(props: IProps) {
                   style={{
                     display: "block",
                     margin: "0 auto",
-                    transform: "translate(10%, -120%)",
+                    transform: "translate(10%, -100%)",
                     fontSize: "12 px",
+                    border: "solid #3F7FBF",
                   }}
                 >
                   {props.buttonText}
@@ -150,6 +155,7 @@ function OptionCard(props: IProps) {
                     display: "block",
                     margin: "0 auto",
                     transform: "translate(0%, -60%)",
+                    border: "solid #3F7FBF",
                   }}
                 >
                   {props.buttonText}

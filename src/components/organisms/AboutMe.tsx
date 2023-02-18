@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import MediaQuery from "react-responsive";
 import styled from "styled-components";
-import { MaxFrameCss } from "../../css/default";
+import { AnimationContainer, MaxFrameCss } from "../../css/default";
 
 interface IProps {
   title?: string;
@@ -52,7 +52,7 @@ const H2DetailSM = styled.div`
 class AboutMe extends React.Component<IProps, {}> {
   render() {
     return (
-      <>
+      <AnimationContainer>
         <MediaQuery query="(max-width: 850px)">
           <Grid container spacing={2}>
             <Grid item xs={3}>
@@ -140,7 +140,7 @@ class AboutMe extends React.Component<IProps, {}> {
             </Grid>
           </Grid>
         </MediaQuery>
-      </>
+      </AnimationContainer>
     );
   }
 }

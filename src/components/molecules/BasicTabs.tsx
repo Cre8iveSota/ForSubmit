@@ -90,7 +90,7 @@ export default function BasicTabs() {
                 {...a11yProps(0)}
                 style={{
                   fontWeight: "bolder",
-                  fontSize: "0.3rem",
+                  fontSize: "1rem",
                   color: "#0084EA",
                 }}
               />
@@ -99,7 +99,7 @@ export default function BasicTabs() {
                 {...a11yProps(1)}
                 style={{
                   fontWeight: "bolder",
-                  fontSize: "0.3rem",
+                  fontSize: "1rem",
                   color: "#0084EA",
                 }}
               />
@@ -108,7 +108,7 @@ export default function BasicTabs() {
                 {...a11yProps(2)}
                 style={{
                   fontWeight: "bolder",
-                  fontSize: "0.3rem",
+                  fontSize: "1rem",
                   color: "#0084EA",
                 }}
               />

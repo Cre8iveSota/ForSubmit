@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import AboutMe from "../components/organisms/AboutMe";
+import styled, { keyframes } from "styled-components";
 import { Container, Row } from "react-bootstrap";
 
 // Title コンポーネントの定義
@@ -37,7 +36,7 @@ export const MaxFrameCss = styled.video`
 // background: url(../img/kv-alternative.jpg) no-repeat center/cover;
 
 export const RowMain = styled(Row)`
-  height: 520px;
+  height: 500px;
   opacity: 1;
   background-position: center;
   z-index: ;
@@ -53,7 +52,7 @@ export const RowMainSM = styled(Row)`
 export const RowFooter = styled(Row)`
   // background-color: lightgray;
   border-bottom: medium green;
-  height: 450px;
+  height: 630px;
   // opacity: 0.5;
   padding: 0;
 `;
@@ -61,7 +60,7 @@ export const RowFooter = styled(Row)`
 export const RowFooterSM = styled(Row)`
   // background-color: lightgray;
   border-bottom: medium green;
-  height: 330px;
+  height: 380px;
   // opacity: 0.5;
   padding: 0;
 `;
@@ -86,7 +85,7 @@ export const Background2 = styled.div`
 `;
 
 export const Background1 = styled.div`
-  height: 100vh;
+  height: 1200px;
   background-size: contain;
   background-position: center;
   background-image: url(./../asset/FrontView.jpg);
@@ -94,7 +93,7 @@ export const Background1 = styled.div`
 `;
 
 export const Background1SM = styled.div`
-  height: 100%;
+  height: 200px;
   background-size: contain;
   background-position: center;
   background-image: url(./../asset/FrontView.jpg);
@@ -150,4 +149,17 @@ export const PaddingDiv = styled.div`
 
 export const PaddingDivSmall = styled.div`
   padding-top: 3%;
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const AnimationContainer = styled.div`
+  animation: ${fadeIn} 1s ease-in-out;
 `;

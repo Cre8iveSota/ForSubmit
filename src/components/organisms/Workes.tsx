@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import { MaxFrameCss } from "../../css/default";
+import { AnimationContainer, MaxFrameCss } from "../../css/default";
 import BasicTabs from "../molecules/BasicTabs";
 
 interface IProps {
@@ -35,9 +35,9 @@ const H2Detail = styled.h2`
 class Workes extends React.Component<IProps, {}> {
   render() {
     return (
-      <>
+      <AnimationContainer>
         <BasicTabs />
-      </>
+      </AnimationContainer>
     );
   }
 }
