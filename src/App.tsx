@@ -232,7 +232,7 @@ export default function App() {
                       transform: "translate(15% , 0%)",
                     }}
                   >
-                    © 2010 Sota Higuchi
+                    © 2023 Sota Higuchi
                   </div>
                 </Grid>
               </Grid>
@@ -321,7 +321,7 @@ export default function App() {
                           height: "150px",
                         }}
                       >
-                        © 2010 Sota Higuchi
+                        © 2023 Sota Higuchi
                       </Grid>
                       <Grid item xs={4}>
                         <PaddingDivSmall />
