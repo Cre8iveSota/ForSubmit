@@ -5,55 +5,77 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type Props = {
   children: React.ReactNode;
-  section: string; // 親側で <section id="about"> ... <TextAnimation section="about" /> のように使う想定
+  section: string;
 };
+
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 const TextAnimation = (props: Props): ReactElement => {
   const textRef = useCallback(
     (node: HTMLParagraphElement | null) => {
       if (!node) return;
 
-      gsap.registerPlugin(TextPlugin, ScrollTrigger);
-
       const text = node.innerHTML;
-      const height = node.clientHeight;
+      const h = node.clientHeight;
       node.innerHTML = "";
-      node.style.height = height + "px";
+      node.style.height = h + "px";
 
-      const selector = "#" + props.section;
+      const sectionEl = document.getElementById(props.section);
+      const triggerEl = sectionEl ?? node;
 
-      // タイムライン：タイプ → 消去 を1サイクルとして無限リピート
+      const typeDur = text.length * 0.06;
+      const eraseDur = text.length * 0.04;
+
       const tl = gsap.timeline({
-        repeat: -1, // 無限
-        repeatDelay: 1.5, // 次サイクルまでの待ち時間
+        repeat: -1,
+        repeatDelay: 1.5,
         paused: true,
         defaults: { ease: "none" },
       });
 
       tl.set(node, { text: "" })
-        .to(node, {
-          duration: text.length * 0.06,
-          text: { value: text },
-        })
-        .to(node, {
-          duration: text.length * 0.04,
-          text: { value: "" },
-          delay: 2.5, // タイプ後の待ち時間
-        });
+        .to(node, { duration: typeDur, text: { value: text } })
+        .to(node, { duration: eraseDur, text: { value: "" } }, "+=3");
 
-      // スクロールに合わせて再生/一時停止
-      const st = ScrollTrigger.create({
-        trigger: selector,
-        start: "top 40%",
-        end: "bottom 40%",
-        onEnter: () => tl.play(),
-        onEnterBack: () => tl.play(),
-        onLeave: () => tl.pause(0), // 画面外に出たら停止＆先頭へ
-        onLeaveBack: () => tl.pause(0),
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 768px)", () => {
+        ScrollTrigger.create({
+          trigger: triggerEl,
+          start: "top 90%",
+          end: "bottom 10%",
+          onEnter: () => tl.play(),
+          onEnterBack: () => tl.play(),
+          onLeave: () => tl.pause(0),
+          onLeaveBack: () => tl.pause(0),
+          onRefresh: (self) => {
+            if (self.isActive) tl.play();
+          },
+          // markers: true,
+        });
       });
 
+      mm.add("(min-width: 769px)", () => {
+        ScrollTrigger.create({
+          trigger: triggerEl,
+          start: "top 70%",
+          end: "bottom 30%",
+          onEnter: () => tl.play(),
+          onEnterBack: () => tl.play(),
+          onLeave: () => tl.pause(0),
+          onLeaveBack: () => tl.pause(0),
+          onRefresh: (self) => {
+            if (self.isActive) tl.play();
+          },
+          // markers: true,
+        });
+      });
+
+      // レイアウト変化対策
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+
       return () => {
-        st.kill();
+        mm.revert(); // matchMedia のクリーンアップ
         tl.kill();
       };
     },
